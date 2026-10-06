@@ -27,8 +27,9 @@
 // - italicize_latin  : отображать латинские слова курсивом
 //                      внутри абзацей (default: false),
 //                      см. также функцию `no_italic`
+// - first_heading_new_page : начинать каждый новый заголовок 1 уровня с новой страницы (default: true)
 // -----------------------------------------------
-#let template(first_page_number : false, italicize_latin : false, doc) = {
+#let template(first_heading_new_page : true, first_page_number : false, italicize_latin : false, doc) = {
 
 
   // Оформление текста
