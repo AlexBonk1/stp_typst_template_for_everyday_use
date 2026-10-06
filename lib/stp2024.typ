@@ -186,7 +186,9 @@
   // Оформление заголовка первого уровня (раздела)
   show heading.where(level:1): body => {
     // п. 2.2.6 : Разделы рекомендуется начинать с новой страницы
-    pagebreak(weak:true)
+    if first_heading_new_page {
+      pagebreak(weak:true)
+    }
     // п. 2.2.5 : Заголовки разделов записываются прописными буквами
     _heading_with_indent(body.numbering, upper(body.body))
   }
